@@ -5,72 +5,49 @@ using UnityEngine;
 
 public class puzzle_tic : MonoBehaviour
 {
-    public char[] letras;
-    int i = 0;
+    public string[] letras;
+    public int letra;
+
     // Start is called before the first frame update
 
 
     // Update is called once per frame
+     void Start()
+    {
+        int letra = Random.Range(0, 26);
+
+        Debug.Log(letras[letra]);
+
+    }
     void Update()
     {
+        //Debug.Log(letras[i]);
 
-        if (i >= 0 && i < letras.Length)
+        if (letra >= 0 && letra < letras.Length)
         {
-            char letraactual = letras[i];
-            KeyCode letraenpantalla = CharToKeyCode(letraactual);
 
-            if (Input.GetKeyDown(letraactual))
+
+
+            foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
             {
-
-
-
+                if (Input.GetKeyDown(key))
+                {
+                    
+                    if (key.ToString().ToLower() == letras[letra].ToLower())
+                    {
+                        Debug.Log("Letra correcta");
+                    }
+                    
+                    Debug.Log("La tecla " + key.ToString().ToLower() + " está presionada.");
+                }
             }
-
         }
     }
 
-    void GenerarLetra()
-    {
-        int i = Random.Range(0, 26);
-    }
+    
     void PuzzleOn()
     {
 
     }
-    KeyCode CharToKeyCode (char c)
-    {
-        // Convertir el carácter a KeyCode
-        switch (c)
-        {
-            case 'A': return KeyCode.A;
-            case 'B': return KeyCode.B;
-            case 'C': return KeyCode.C;
-            case 'D': return KeyCode.D;
-            case 'E': return KeyCode.E;
-            case 'F': return KeyCode.F;
-            case 'G': return KeyCode.G;
-            case 'H': return KeyCode.H;
-            case 'I': return KeyCode.I;
-            case 'J': return KeyCode.J;
-            case 'K': return KeyCode.K;
-            case 'L': return KeyCode.L;
-            case 'M': return KeyCode.M;
-            case 'N': return KeyCode.N;
-            case 'O': return KeyCode.O;
-            case 'P': return KeyCode.P;
-            case 'Q': return KeyCode.Q;
-            case 'R': return KeyCode.R;
-            case 'S': return KeyCode.S;
-            case 'T': return KeyCode.T;
-            case 'U': return KeyCode.U;
-            case 'V': return KeyCode.V;
-            case 'W': return KeyCode.W;
-            case 'X': return KeyCode.X;
-            case 'Y': return KeyCode.Y;
-            case 'Z': return KeyCode.Z;
-
-
-
-        }
-    }
+   
 }
