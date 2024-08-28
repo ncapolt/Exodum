@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class TextoScript : MonoBehaviour
 {
+    public puzzle_tic puzzle_Tic;
     // Reference to the Text UI component
     public Text textoNotificacion;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         // Ensure that textoNotificacion is assigned and initialize it properly
         if (textoNotificacion != null)
         {
