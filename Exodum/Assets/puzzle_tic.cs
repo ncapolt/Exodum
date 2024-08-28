@@ -12,63 +12,71 @@ public class puzzle_tic : MonoBehaviour
     public GameObject camara_puzzle;
     public GameObject camara_principal;
     bool juego_comenzo;
-    // Start is called before the first frame update
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        letra = Random.Range(0, letras.Length); 
+        Debug.Log(letras[letra]);
+    }
 
     // Update is called once per frame
-     void Start()
-    {
-        letra = Random.Range(0, 26);
-        Debug.Log(letras[letra]);
-        
-
-    }
     void Update()
     {
-        if (Input.GetKeyDown("o"))
+        if (Input.GetKeyDown("e"))
         {
             juego_comenzo = true;
         }
-        //Debug.Log(letras[i]);
-        if (juego_comenzo)
+        if (Input.GetKeyDown("o"))
         {
-
-
-            dialogo.text = letras[letra];
-            camara_puzzle.gameObject.SetActive(true);
-            camara_principal.gameObject.SetActive(false);
-  
-            if (letra >= 0 && letra < letras.Length)
-            {
-
-
-
-                foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
-                {
-                    if (Input.GetKeyDown(key))
-                    {
-
-                        if (key.ToString().ToLower() == letras[letra].ToLower())
-                        {
-                            PuzzleOn();
-                            juego_comenzo = false;  
-                        }
-
-                        Debug.Log("La tecla " + key.ToString().ToLower() + " está presionada.");
-                    }
-                }
-            }
+            juego_comenzo = false;
+            camara_puzzle.SetActive(false);
+            camara_principal.SetActive(true);
         }
 
-        
+        if (juego_comenzo)
+        {
+            dialogo.text = letras[letra];
+            camara_puzzle.SetActive(true);
+            camara_principal.SetActive(false);
+
+            puzzle();
+        }
     }
 
-    
     void PuzzleOn()
     {
         Debug.Log("funcionando");
         Debug.Log("Letra correcta");
         dialogo.text = "letra correcta";
     }
-   
+
+    void puzzle()
+    {
+        if (letra >= 0 && letra < letras.Length)
+        {
+            foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
+            {
+                if (Input.GetKeyDown(key))
+                {
+                    if (key.ToString().ToLower() == letras[letra].ToLower())
+                    {
+                        PuzzleOn();
+                        repeticion();
+                        
+                    }
+
+                    Debug.Log("La tecla " + key.ToString().ToLower() + " está presionada.");
+                }
+            }
+        }
+ 
+    }
+
+    void repeticion()
+    {
+        letra = Random.Range(0, letras.Length);
+    }
+
 }
+
