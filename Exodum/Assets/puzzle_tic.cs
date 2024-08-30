@@ -8,6 +8,7 @@ public class puzzle_tic : MonoBehaviour
 {
     public string[] letras;
     public int letra;
+    public int acierto;
     public Text dialogo;
     public GameObject camara_puzzle;
     public GameObject camara_principal;
@@ -27,7 +28,7 @@ public class puzzle_tic : MonoBehaviour
         {
             juego_comenzo = true;
         }
-        if (Input.GetKeyDown("o"))
+        if (Input.GetKeyDown("escape"))
         {
             juego_comenzo = false;
             camara_puzzle.SetActive(false);
@@ -61,8 +62,16 @@ public class puzzle_tic : MonoBehaviour
                 {
                     if (key.ToString().ToLower() == letras[letra].ToLower())
                     {
-                        PuzzleOn();
+                       
                         repeticion();
+                           acierto++;
+                           if (acierto >= 5)
+                           {
+                            juego_comenzo = false;
+                            dialogo.text = "letras correctas, puzzle superado";
+
+                           }
+
                         
                     }
 
@@ -76,6 +85,15 @@ public class puzzle_tic : MonoBehaviour
     void repeticion()
     {
         letra = Random.Range(0, letras.Length);
+        dialogo.text = letras [letra];
+        acierto ++;
+         if (acierto >= 5)
+                           {
+                            juego_comenzo = false;
+                            dialogo.text = "letras correctas, puzzle superado";
+
+                           }
+
     }
 
 }
