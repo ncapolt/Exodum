@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +16,7 @@ public class puzzle_tic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        acierto = 0;    
         letra = Random.Range(0, letras.Length); 
         Debug.Log(letras[letra]);
     }
@@ -31,6 +31,7 @@ public class puzzle_tic : MonoBehaviour
         if (Input.GetKeyDown("escape"))
         {
             juego_comenzo = false;
+            dialogo.text = "";
             camara_puzzle.SetActive(false);
             camara_principal.SetActive(true);
         }
@@ -62,39 +63,45 @@ public class puzzle_tic : MonoBehaviour
                 {
                     if (key.ToString().ToLower() == letras[letra].ToLower())
                     {
-                       
                         repeticion();
-                           acierto++;
-                           if (acierto >= 5)
-                           {
+                        acierto++;
+                        if (acierto >= 5)
+                        {
                             juego_comenzo = false;
                             dialogo.text = "letras correctas, puzzle superado";
-
-                           }
-
-                        
+                            camara_puzzle.SetActive(false);
+                            camara_principal.SetActive(true);
+                            StartCoroutine(Esperame());
+                        }
                     }
-
+                    else 
+                    {dialogo.text = "Letra inconrrecta";
+                    dialogo.Color = color.red;
+                    }
                     Debug.Log("La tecla " + key.ToString().ToLower() + " está presionada.");
                 }
             }
         }
- 
     }
 
     void repeticion()
     {
         letra = Random.Range(0, letras.Length);
-        dialogo.text = letras [letra];
-        acierto ++;
-         if (acierto >= 5)
-                           {
-                            juego_comenzo = false;
-                            dialogo.text = "letras correctas, puzzle superado";
-
-                           }
-
+        dialogo.text = letras[letra];
+        acierto++;
+        if (acierto >= 5)
+        {
+            juego_comenzo = false;
+            dialogo.text = "letras correctas, puzzle superado";
+            StartCoroutine(Esperame());
+        }
     }
 
+    IEnumerator Esperame()
+    {
+        yield return new WaitForSeconds(5);
+        dialogo.text = "";
+        camara_puzzle.SetActive(false);
+        camara_principal.SetActive(true);
+    }
 }
-
