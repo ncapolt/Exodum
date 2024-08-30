@@ -76,7 +76,7 @@ public class puzzle_tic : MonoBehaviour
                     }
                     else 
                     {dialogo.text = "Letra inconrrecta";
-                    dialogo.Color = color.red;
+                    
                     }
                     Debug.Log("La tecla " + key.ToString().ToLower() + " está presionada.");
                 }
