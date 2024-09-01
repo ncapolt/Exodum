@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class TextoScript : MonoBehaviour
 {
     public puzzle_tic puzzle_Tic;

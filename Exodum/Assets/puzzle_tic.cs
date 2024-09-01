@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class puzzle_tic : MonoBehaviour
 {
     public string[] letras;
@@ -104,4 +104,8 @@ public class puzzle_tic : MonoBehaviour
         camara_puzzle.SetActive(false);
         camara_principal.SetActive(true);
     }
+
+   
+
 }
+ 
