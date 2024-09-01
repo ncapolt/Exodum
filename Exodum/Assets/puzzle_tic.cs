@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class puzzle_tic : MonoBehaviour
 {
-    public string[] letras;
-    public int letra;
+    public string[] palabras;  
     public int acierto;
     public Text dialogo;
     public GameObject camara_puzzle;
     public GameObject camara_principal;
     bool juego_comenzo;
 
+    private string palabraActual;  
+    private char[] palabraMostrar; 
+
     // Start is called before the first frame update
     void Start()
     {
-        acierto = 0;    
-        letra = Random.Range(0, letras.Length); 
-        Debug.Log(letras[letra]);
+        acierto = 0;
+        SeleccionarPalabraAleatoria();
     }
 
     // Update is called once per frame
@@ -38,7 +40,6 @@ public class puzzle_tic : MonoBehaviour
 
         if (juego_comenzo)
         {
-            dialogo.text = letras[letra];
             camara_puzzle.SetActive(true);
             camara_principal.SetActive(false);
 
@@ -46,54 +47,65 @@ public class puzzle_tic : MonoBehaviour
         }
     }
 
-    void PuzzleOn()
+    void SeleccionarPalabraAleatoria()
     {
-        Debug.Log("funcionando");
-        Debug.Log("Letra correcta");
-        dialogo.text = "letra correcta";
+        int indice = Random.Range(0, palabras.Length);
+        palabraActual = palabras[indice].ToUpper();  
+        palabraMostrar = new string('_', palabraActual.Length).ToCharArray();
+
+        palabraMostrar[0] = palabraActual[0];
+        palabraMostrar[palabraActual.Length - 1] = palabraActual[palabraActual.Length - 1];
+
+        for (int i = 0; i < palabraActual.Length; i++)
+        {
+            if (palabraActual[i] == ' ')
+            {
+                palabraMostrar[i] = ' ';  
+            }
+        }
+
+        dialogo.text = new string(palabraMostrar);
     }
 
     void puzzle()
     {
-        if (letra >= 0 && letra < letras.Length)
+        if (palabraActual != null)
         {
             foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
             {
                 if (Input.GetKeyDown(key))
                 {
-                    if (key.ToString().ToLower() == letras[letra].ToLower())
+                    char letra = key.ToString().ToUpper()[0];
+                    bool letraEncontrada = false;
+
+                    for (int i = 0; i < palabraActual.Length; i++)
                     {
-                        repeticion();
-                        acierto++;
-                        if (acierto >= 5)
+                        if (palabraActual[i] == letra)
                         {
-                            juego_comenzo = false;
-                            dialogo.text = "letras correctas, puzzle superado";
-                            camara_puzzle.SetActive(false);
-                            camara_principal.SetActive(true);
-                            StartCoroutine(Esperame());
+                            palabraMostrar[i] = letra;
+                            letraEncontrada = true;
                         }
                     }
-                    else 
-                    {dialogo.text = "Letra inconrrecta";
-                    
+
+                    if (letraEncontrada)
+                    {
+                        dialogo.text = new string(palabraMostrar);
+                        Debug.Log("Letra correcta: " + letra);
                     }
-                    Debug.Log("La tecla " + key.ToString().ToLower() + " está presionada.");
+                    else
+                    {
+                        dialogo.text = "Letra incorrecta";
+                        Debug.Log("Letra incorrecta: " + letra);
+                    }
+
+                    if (new string(palabraMostrar) == palabraActual)
+                    {
+                        juego_comenzo = false;
+                        dialogo.text = "¡Palabra completa, puzzle superado!";
+                        StartCoroutine(Esperame());
+                    }
                 }
             }
-        }
-    }
-
-    void repeticion()
-    {
-        letra = Random.Range(0, letras.Length);
-        dialogo.text = letras[letra];
-        acierto++;
-        if (acierto >= 5)
-        {
-            juego_comenzo = false;
-            dialogo.text = "letras correctas, puzzle superado";
-            StartCoroutine(Esperame());
         }
     }
 
@@ -104,8 +116,4 @@ public class puzzle_tic : MonoBehaviour
         camara_puzzle.SetActive(false);
         camara_principal.SetActive(true);
     }
-
-   
-
 }
- 
