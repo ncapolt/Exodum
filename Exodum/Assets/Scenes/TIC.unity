@@ -4302,12 +4302,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palabras:
-  - la mejor orientacion
+  - l a   m e j o r   o r i e n t a c i o n
   - e d u c a n d o  p a r a  l a  v i d a
-  - t e r c e r   p i s o
+  - s h i f t  a  m e s h  c u b e
   - j e r o
   - d e s a r r o l l a d o r
-  - s a l a m a l e c o
+  - t e c n i c a t u r a
   acierto: 0
   dialogo: {fileID: 1057622688}
   camara_puzzle: {fileID: 1177312320}
