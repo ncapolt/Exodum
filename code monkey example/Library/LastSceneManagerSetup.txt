@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/TalkToNPCs/GameScene_TalkToNPCs.unity
+  isLoaded: 1
+  isActive: 1
