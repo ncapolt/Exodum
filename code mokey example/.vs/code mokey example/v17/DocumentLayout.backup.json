@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\48389619\\Documents\\GitHub\\Exodum\\code mokey example\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{129E4C34-D59F-3D2C-3CDD-E38174B0ECE6}|Assembly-CSharp.csproj|c:\\users\\48389619\\documents\\github\\exodum\\code mokey example\\assets\\talktonpcs\\scripts\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{129E4C34-D59F-3D2C-3CDD-E38174B0ECE6}|Assembly-CSharp.csproj|solutionrelative:assets\\talktonpcs\\scripts\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IInteractable.cs",
+              "DocumentMoniker": "C:\\Users\\48389619\\Documents\\GitHub\\Exodum\\code mokey example\\Assets\\TalkToNPCs\\Scripts\\IInteractable.cs",
+              "RelativeDocumentMoniker": "Assets\\TalkToNPCs\\Scripts\\IInteractable.cs",
+              "ToolTip": "C:\\Users\\48389619\\Documents\\GitHub\\Exodum\\code mokey example\\Assets\\TalkToNPCs\\Scripts\\IInteractable.cs*",
+              "RelativeToolTip": "Assets\\TalkToNPCs\\Scripts\\IInteractable.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T11:49:45.578Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

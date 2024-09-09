@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    
-    
-    // Update is called once per frame
-   private void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) {
-        float interactRange = 2f;
-            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);   
-            foreach (Collider collider in colliderArray)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log(collider);
+            float interactRange = 2f;
+            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+            foreach (Collider collider in colliderArray)
+            {
+                NPCInteractable npcInteractable = collider.gameObject.GetComponent<NPCInteractable>();
+                if (npcInteractable != null) 
+                {
+                    npcInteractable.Interact();
+                }
+            }
         }
-       }
     }
 }
