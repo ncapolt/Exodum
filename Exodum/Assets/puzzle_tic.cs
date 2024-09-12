@@ -24,9 +24,8 @@ public class puzzle_tic : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown("e"))
+    public void Interact()
+    { 
         {
             juego_comenzo = true;
         }

@@ -6,6 +6,6 @@ public class ChangeScenes : MonoBehaviour
 {
     public void Interact()
     {
-      SceneManager.LoadScene("TIC");
+         SceneManager.LoadScene("TIC");
     }
 }

@@ -30,7 +30,19 @@ public class PlayerInteract : MonoBehaviour
                 {
                     ChangeScenes.Interact();
                 }
-              
+
+                IrAMedios IrAMedios = collider.gameObject.GetComponent<IrAMedios>();
+                if (IrAMedios != null)
+                {
+                    IrAMedios.Interact();
+                }
+
+                puzzle_tic puzzle_tic = collider.gameObject.GetComponent<puzzle_tic>();
+                if (puzzle_tic != null)
+                {
+                    puzzle_tic.Interact();
+                }
+
             }
         }
     }
