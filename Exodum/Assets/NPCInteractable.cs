@@ -8,6 +8,11 @@ public class NPCInteractable : MonoBehaviour
 
     public void Interact()
     {
-        SceneManager.LoadScene("TIC");
+        
+    }
+
+    public string getInteractText()
+    {
+        return interactText;
     }
 }

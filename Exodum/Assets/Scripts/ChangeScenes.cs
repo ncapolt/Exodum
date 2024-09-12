@@ -4,11 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ChangeScenes : MonoBehaviour
 {
-    void Update()
+    public void Interact()
     {
-        if (Input.GetKeyDown("q"))
-        {
-            SceneManager.LoadScene("Medios");
-        }
+      SceneManager.LoadScene("TIC");
     }
 }
