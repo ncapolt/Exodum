@@ -1346,6 +1346,21 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1526907471308863695, guid: da5fcd38998b4c5498bb5e3381f506b0,
+        type: 3}
+      propertyPath: headBobSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526907471308863695, guid: da5fcd38998b4c5498bb5e3381f506b0,
+        type: 3}
+      propertyPath: headBobAmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526907471308863695, guid: da5fcd38998b4c5498bb5e3381f506b0,
+        type: 3}
+      propertyPath: walkingSpeed
+      value: 4.27
+      objectReference: {fileID: 0}
     - target: {fileID: 1526907471308863728, guid: da5fcd38998b4c5498bb5e3381f506b0,
         type: 3}
       propertyPath: m_Name
@@ -4806,7 +4821,7 @@ MonoBehaviour:
   acierto: 0
   dialogo: {fileID: 0}
   camara_puzzle: {fileID: 1177312320}
-  camara_principal: {fileID: 0}
+  camara_principal: {fileID: 421970833}
 --- !u!114 &860194399
 MonoBehaviour:
   m_ObjectHideFlags: 0

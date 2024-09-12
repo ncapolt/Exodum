@@ -89653,6 +89653,11 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1526907471308863695, guid: da5fcd38998b4c5498bb5e3381f506b0,
+        type: 3}
+      propertyPath: headBobSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1526907471308863728, guid: da5fcd38998b4c5498bb5e3381f506b0,
         type: 3}
       propertyPath: m_Name
