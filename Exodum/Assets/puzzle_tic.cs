@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class puzzle_tic : MonoBehaviour
 {
     public string[] palabras;  
@@ -22,6 +22,7 @@ public class puzzle_tic : MonoBehaviour
         acierto = 0;
         SeleccionarPalabraAleatoria();
     }
+   
 
     // Update is called once per frame
     public void Interact()
@@ -63,7 +64,7 @@ public class puzzle_tic : MonoBehaviour
             }
         }
 
-        dialogo.text = new string(palabraMostrar);
+        //dialogo.text = new string(palabraMostrar);
     }
 
     void puzzle()
