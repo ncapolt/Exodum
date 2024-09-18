@@ -8,7 +8,7 @@ public class Lintera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        LuzLinterna.enabled = false;
     }
 
     // Update is called once per frame
@@ -16,14 +16,19 @@ public class Lintera : MonoBehaviour
     {
         if (Input.GetButtonDown("Linterna"))
         {
-            if(LuzLinterna.enabled == true)
-            {
-                LuzLinterna.enabled = false;
-            }
-            else if (LuzLinterna.enabled == false)
+            if (LuzLinterna.enabled == false)
             {
                 LuzLinterna.enabled = true;
             }
+            else if (LuzLinterna.enabled == true)
+            {
+                LuzLinterna.enabled = false;
+            }
         }
     }
+    public void Prenderlinterna()
+    {
+        LuzLinterna.enabled = true;
+    }
+
 }
