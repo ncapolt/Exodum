@@ -9,11 +9,13 @@ public class loremanager : MonoBehaviour
 {
     public Text LoreTxt;
     public Text Tareas;
+    public Text Aviso;
     bool TareaActiva;
     public Lintera linterna;
     // Start is called before the first frame update
     void Start()
     {
+        
         StartCoroutine (LoreMedios ());
     }
 
@@ -26,6 +28,10 @@ public class loremanager : MonoBehaviour
             {
                 linterna.Prenderlinterna();
                 LoreTxt.text = null;
+                StartCoroutine(TareasOn());
+
+                
+
             }
         }
 
@@ -48,5 +54,13 @@ public class loremanager : MonoBehaviour
         LoreTxt.text = "Apreta la F para prender la linterna";
         TareaActiva = true;
 
+    }
+    IEnumerator TareasOn()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Aviso.text = " Nueva tarea: Busca la termica y prende las luces";
+        yield return new WaitForSeconds(4);
+        Aviso.text = null;
+        Tareas.text = "Tareas: Busca la caja de las luces en alguna de las aulas";
     }
 }
