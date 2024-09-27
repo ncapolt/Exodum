@@ -13,6 +13,8 @@ public class NPCInteractable : MonoBehaviour
 
     public string getInteractText()
     {
-        return interactText;
+        
+            return interactText;
+        
     }
 }

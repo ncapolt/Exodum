@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class loremanager : MonoBehaviour
 {
+    public static loremanager Instance;
+    public bool Irse = false;
     public Text LoreTxt;
     public Text Tareas;
     public Text Aviso;
@@ -27,7 +29,7 @@ public class loremanager : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.F)) 
             {
-                StartCoroutine( TareasOn());
+                
                 LnFun = true;
                 if (LnFun)
                 {
@@ -55,7 +57,9 @@ public class loremanager : MonoBehaviour
         yield return new WaitForSeconds(2);
         LoreTxt.text = "Apreta la F para prender la linterna";
         TareaActiva = true;
-        
+        yield return new WaitForSeconds(2);
+        StartCoroutine(TareasOn());
+
 
     }
     IEnumerator TareasOn()

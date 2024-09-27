@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameGanager : MonoBehaviour
 {
-    public int vida;
-    public int puntaje;
+   
     // Start is called before the first frame update
     void Start()
     {
