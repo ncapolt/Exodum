@@ -12,6 +12,7 @@ public class loremanager : MonoBehaviour
     public Text Aviso;
     bool TareaActiva;
     public Lintera linterna;
+    public bool LnFun;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +25,15 @@ public class loremanager : MonoBehaviour
     {
         if (TareaActiva) 
         {
-            if (Input.GetKeyUp(KeyCode.F)) 
+            if (Input.GetKey(KeyCode.F)) 
             {
-                linterna.Prenderlinterna();
-                LoreTxt.text = null;
-                StartCoroutine(TareasOn());
-
-                
-
+                StartCoroutine( TareasOn());
+                LnFun = true;
+                if (LnFun)
+                {
+                    linterna.LinternaFun();
+                    LoreTxt.text = null;
+                }
             }
         }
 
@@ -53,6 +55,7 @@ public class loremanager : MonoBehaviour
         yield return new WaitForSeconds(2);
         LoreTxt.text = "Apreta la F para prender la linterna";
         TareaActiva = true;
+        
 
     }
     IEnumerator TareasOn()
