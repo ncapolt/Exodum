@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LucesMedios: {fileID: 0}
+  changeScenes: {fileID: 0}
 --- !u!4 &187941700
 Transform:
   m_ObjectHideFlags: 0
@@ -487,6 +488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LuzLinterna: {fileID: 188088048}
+  Luzfunciona: 1
+  loremanager: {fileID: 1129800342}
 --- !u!114 &204871377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22725,6 +22728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LucesMedios: {fileID: 187941698}
+  changeScenes: {fileID: 0}
 --- !u!1 &864450607
 GameObject:
   m_ObjectHideFlags: 0
@@ -89734,10 +89738,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14348ca01301baa439aebad28ec08cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Irse: 0
   LoreTxt: {fileID: 770399273}
   Tareas: {fileID: 852445607}
   Aviso: {fileID: 132247443}
   linterna: {fileID: 204871372}
+  LnFun: 0
 --- !u!4 &1129800343
 Transform:
   m_ObjectHideFlags: 0
@@ -90387,7 +90393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526907470324984695}
   m_LocalRotation: {x: -0, y: 0.9999998, z: -0, w: 0.0005699426}
-  m_LocalPosition: {x: -28, y: 0.73, z: -5.58}
+  m_LocalPosition: {x: -34.47, y: 0.73, z: 1.64}
   m_LocalScale: {x: 0.811992, y: 0.811992, z: 0.811992}
   m_Children:
   - {fileID: 1526907470467851081}
