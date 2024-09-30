@@ -5,13 +5,13 @@ using UnityEngine;
 public class Lintera : MonoBehaviour
 {
     public Light LuzLinterna;
-    public bool Luzfunciona;
-    public loremanager loremanager;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
         LuzLinterna.enabled = false;
-        Luzfunciona = loremanager.LnFun;
+        
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class Lintera : MonoBehaviour
                }
            }*/
 
-        if (Luzfunciona)
+        if (loremanager.Instance.LnFun)
         {
          
             LinternaFun();
