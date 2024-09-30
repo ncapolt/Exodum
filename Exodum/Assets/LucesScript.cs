@@ -5,7 +5,7 @@ using UnityEngine;
 public class LucesScript : MonoBehaviour
 {
     public GameObject LucesMedios;
-    public ChangeScenes changeScenes;
+  
 
     public void Interact()
     {
@@ -14,5 +14,5 @@ public class LucesScript : MonoBehaviour
         loremanager.Instance.Irse = true;
     }
 
- 
+
 }

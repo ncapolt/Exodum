@@ -6,6 +6,8 @@ public class NPCInteractable : MonoBehaviour
 {
     [SerializeField] private string interactText;
 
+
+
     public void Interact()
     {
         
