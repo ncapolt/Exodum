@@ -29,12 +29,7 @@ public class Lintera : MonoBehaviour
                }
            }*/
 
-        if (loremanager.Instance.LnFun)
-        {
-         
-            LinternaFun();
-        }
-
+       
         }
         /*public void Prenderlinterna()
     {

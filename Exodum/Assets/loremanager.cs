@@ -35,8 +35,8 @@ public class loremanager : MonoBehaviour
         // Controlar si la linterna se puede activar
         if (TareaActiva && Input.GetKey(KeyCode.F))
         {
-            LnFun = true;
-            if (LnFun)
+            loremanager.Instance.LnFun = true;
+            if (loremanager.Instance.LnFun)
             {
                 linterna.LinternaFun();
                 LoreTxt.text = "";

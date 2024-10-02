@@ -57,6 +57,7 @@ public class martilloScript : MonoBehaviour
 
             // (Opcional) Destruir el objeto golpeado
             Destroy(other.gameObject);
+            Debug.Log ("gay");
         }
     }
 }
