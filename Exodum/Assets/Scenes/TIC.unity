@@ -1479,6 +1479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SledgeHammer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1f0fd7be4375998429fedfe290c120be, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f0fd7be4375998429fedfe290c120be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.25352344
