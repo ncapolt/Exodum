@@ -1,14 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class martilloScript : MonoBehaviour
+public class HammerMove : MonoBehaviour
 {
     public Transform startPosition;  // Empty que define la posición inicial
     public Transform endPosition;    // Empty que define la posición final
     public float speed = 5.0f;       // Velocidad de la animación
     private bool isSwinging = false; // Para controlar si el martillo está en movimiento
     private bool returning = false;  // Para controlar el regreso del martillo
+
+    public GameObject[] destructibleObjects;  // Array para las sillas u objetos que quieres destruir
 
     void Update()
     {
@@ -47,10 +47,18 @@ public class martilloScript : MonoBehaviour
     // Método que se llama cuando el martillo toca otro objeto
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica si el objeto golpeado tiene el tag "Destructible"
-        if (other.CompareTag("Destructible"))
+        // Verificar si el objeto tocado está en el array de destructibles
+        foreach (GameObject obj in destructibleObjects)
         {
-            Debug.Log("Martillo impactó una silla destructible.");
+            if (other.gameObject == obj)
+            {
+                Debug.Log("Martillo impactó un objeto destructible.");
+                // (Opcional) Destruir el objeto golpeado
+                Destroy(other.gameObject);
+
+                // Instanciar la explosión (si tienes una explosionPrefab)
+                // Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
+            }
         }
     }
 }

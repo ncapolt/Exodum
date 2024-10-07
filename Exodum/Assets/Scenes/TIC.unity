@@ -1481,7 +1481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1f0fd7be4375998429fedfe290c120be, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Destructible
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f0fd7be4375998429fedfe290c120be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1938,14 +1938,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 428704131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001d5791c843eb1498bcc5839d691113, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c9565b4f3f2a65409d016da780ce0f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPosition: {fileID: 318374887}
   endPosition: {fileID: 1840085590}
   speed: 5
-  explosionPrefab: {fileID: 7808642990937812537, guid: ea4fe0c4646edb347a0f9d40b8c1e61c,
-    type: 3}
+  destructibleObjects:
+  - {fileID: 794541344}
+  - {fileID: 1284260650}
+  - {fileID: 1985108249}
+  - {fileID: 444194399}
+  - {fileID: 894148691}
+  - {fileID: 1676982888}
 --- !u!65 &428704136
 BoxCollider:
   m_ObjectHideFlags: 0
