@@ -10,8 +10,6 @@ public class martilloScript : MonoBehaviour
     private bool isSwinging = false; // Para controlar si el martillo está en movimiento
     private bool returning = false;  // Para controlar el regreso del martillo
 
-    public GameObject explosionPrefab; // Prefab de la explosión
-
     void Update()
     {
         // Si se hace clic con el mouse y el martillo no está en movimiento
@@ -46,18 +44,13 @@ public class martilloScript : MonoBehaviour
         }
     }
 
-    // Método que se llama cuando el martillo golpea algo
+    // Método que se llama cuando el martillo toca otro objeto
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica si el objeto golpeado tiene el tag "Destructible" o cualquier criterio
+        // Verifica si el objeto golpeado tiene el tag "Destructible"
         if (other.CompareTag("Destructible"))
         {
-            // Instanciar la explosión en la posición del impacto
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-
-            // (Opcional) Destruir el objeto golpeado
-            Destroy(other.gameObject);
-            Debug.Log ("gay");
+            Debug.Log("Martillo impactó una silla destructible.");
         }
     }
 }

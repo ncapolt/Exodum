@@ -1422,7 +1422,7 @@ GameObject:
   m_Layer: 0
   m_Name: posicion inicial
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1954,7 +1954,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428704131}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7928872, y: 0.19540131, z: 0.07319122}
@@ -3460,7 +3460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794541344}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -10.066, y: 0.5061497, z: -24.424786}
+  m_LocalPosition: {x: -10.066, y: 0.5061497, z: -24.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 860067898}
@@ -9937,7 +9937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860098302}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.57944, y: 0.37512797, z: -32.9956}
+  m_LocalPosition: {x: -8.63, y: 0.38, z: -32.9956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 860067898}
@@ -21737,7 +21737,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860094904}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.8254737, y: 0.7289899, z: 2.032761}
@@ -75793,7 +75793,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35eed6f4afb39ba4baf9bc763afec18c, type: 2}
+  - {fileID: 2100366, guid: e275e327d35cf1d45a58541a1835a84c, type: 3}
   - {fileID: 2100000, guid: 35eed6f4afb39ba4baf9bc763afec18c, type: 2}
   - {fileID: 2100000, guid: 35eed6f4afb39ba4baf9bc763afec18c, type: 2}
   m_StaticBatchInfo:
@@ -88004,7 +88004,7 @@ GameObject:
   m_Layer: 0
   m_Name: posicion final
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
