@@ -43,22 +43,12 @@ public class HammerMove : MonoBehaviour
             }
         }
     }
-
-    // Método que se llama cuando el martillo toca otro objeto
-    private void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        // Verificar si el objeto tocado está en el array de destructibles
-        foreach (GameObject obj in destructibleObjects)
+        if (collision.gameObject.tag == "Destructible")
         {
-            if (other.gameObject == obj)
-            {
-                Debug.Log("Martillo impactó un objeto destructible.");
-                // (Opcional) Destruir el objeto golpeado
-                Destroy(other.gameObject);
-
-                // Instanciar la explosión (si tienes una explosionPrefab)
-                // Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
-            }
+            Destroy(collision.gameObject);
         }
     }
+
 }
