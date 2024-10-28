@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\48306827\\Documents\\GitHub\\Exodum\\pruebas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{940ED922-269D-89B0-DAC0-423B9C0DBF19}|Assembly-CSharp.csproj|c:\\users\\48306827\\documents\\github\\exodum\\pruebas\\assets\\characteragente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{940ED922-269D-89B0-DAC0-423B9C0DBF19}|Assembly-CSharp.csproj|solutionrelative:assets\\characteragente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CharacterAgente.cs",
+              "DocumentMoniker": "C:\\Users\\48306827\\Documents\\GitHub\\Exodum\\pruebas\\Assets\\CharacterAgente.cs",
+              "RelativeDocumentMoniker": "Assets\\CharacterAgente.cs",
+              "ToolTip": "C:\\Users\\48306827\\Documents\\GitHub\\Exodum\\pruebas\\Assets\\CharacterAgente.cs",
+              "RelativeToolTip": "Assets\\CharacterAgente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T11:04:51.926Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
