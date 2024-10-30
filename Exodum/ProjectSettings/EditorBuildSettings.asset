@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TIC.unity
-    guid: e593b9e9d3e39024d886daeec3b7005e
+    path: Assets/Scenes/Menu.unity
+    guid: aaf2ad1e327006c45ac3ba4566f45074
   - enabled: 1
     path: Assets/Scenes/Medios.unity
     guid: 6d00a82ead47751489483c2f3fc75b41
+  - enabled: 1
+    path: Assets/Scenes/TIC.unity
+    guid: e593b9e9d3e39024d886daeec3b7005e
   m_configObjects: {}
