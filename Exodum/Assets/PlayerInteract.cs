@@ -42,7 +42,11 @@ public class PlayerInteract : MonoBehaviour
                 {
                     puzzle_tic.Interact();
                 }
-
+                RackScript RackScript = collider.gameObject.GetComponent<RackScript>();
+                if (RackScript != null)
+                {
+                    RackScript.Interact();
+                }
             }
         }
     }

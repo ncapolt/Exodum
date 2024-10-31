@@ -7,7 +7,7 @@ public class HammerMove : MonoBehaviour
     public float speed = 5.0f;       // Velocidad de la animación
     private bool isSwinging = false; // Para controlar si el martillo está en movimiento
     private bool returning = false;  // Para controlar el regreso del martillo
-
+    public Collider colliderMartillo;
     public GameObject[] destructibleObjects;  // Array para las sillas u objetos que quieres destruir
 
     void Update()
@@ -16,6 +16,7 @@ public class HammerMove : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !isSwinging)
         {
             isSwinging = true; // Comienza el swing
+            colliderMartillo.enabled = true;
         }
 
         // Mover el martillo hacia la posición final
@@ -40,6 +41,7 @@ public class HammerMove : MonoBehaviour
             {
                 returning = false;  // Resetea el regreso
                 isSwinging = false; // Detiene el movimiento
+                colliderMartillo.enabled = false;
             }
         }
     }
