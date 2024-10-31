@@ -41,15 +41,15 @@ public class GuardiaScript : MonoBehaviour
 
     void Perseguir()
     {
-        if (!isChasing)
-        {
-            isChasing = true;
+        //if (!isChasing)
+        //{
+           // isChasing = true;
             guardia.destination = jugador.position;
-        }
-        else
-        {
-            isChasing =false;
-        }
+      //  }
+        //else
+        //{
+        //    isChasing = false;
+        //}
 
         Debug.Log("perseguir");
     }
