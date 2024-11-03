@@ -5,10 +5,14 @@ using UnityEngine;
 public class RackScript : MonoBehaviour
 {
     public GameObject martillo;
+    public puzzle_tic puzzleScript; // Referencia al script del puzzle
 
-    // Start is called before the first frame update
     public void Interact()
     {
-        martillo.SetActive(true); // Activa el GameObject martillo
+        if (puzzleScript.puzzleCompletado) // Verifica si el puzzle está completado
+        {
+            martillo.SetActive(true); // Activa el GameObject martillo
+        }
+       
     }
 }

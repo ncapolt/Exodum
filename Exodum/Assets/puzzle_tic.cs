@@ -2,55 +2,68 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
+
 public class puzzle_tic : MonoBehaviour
 {
-    public string[] palabras;  
+    public string[] palabras;
     public int acierto;
     public Text dialogo;
     public GameObject camara_puzzle;
     public GameObject camara_principal;
-    bool juego_comenzo;
+    public Text textoSalir;
+    public GameObject interactUI;
 
-    private string palabraActual;  
-    private char[] palabraMostrar; 
+    [HideInInspector]
+    public bool puzzleCompletado = false; // Esta variable indica si el puzzle está completo
 
-    // Start is called before the first frame update
+    private bool juego_comenzo;
+    private string palabraActual;
+    private char[] palabraMostrar;
+    private string textoPrincipal;
+
     void Start()
     {
         acierto = 0;
         SeleccionarPalabraAleatoria();
+        camara_puzzle.SetActive(false);
+        dialogo.text = "";
+        dialogo.gameObject.SetActive(false);
+        textoSalir.gameObject.SetActive(false);
     }
-   
 
-    // Update is called once per frame
-    public void Interact()
-    { 
-        {
-            juego_comenzo = true;
-        }
-        if (Input.GetKeyDown("escape"))
-        {
-            juego_comenzo = false;
-            dialogo.text = "";
-            camara_puzzle.SetActive(false);
-            camara_principal.SetActive(true);
-        }
-
+    private void Update()
+    {
         if (juego_comenzo)
         {
+            puzzle();
+        }
+    }
+
+    public void Interact()
+    {
+        if (!juego_comenzo)
+        {
+            juego_comenzo = true;
             camara_puzzle.SetActive(true);
             camara_principal.SetActive(false);
+            textoPrincipal = new string(palabraMostrar);
+            dialogo.text = textoPrincipal;
+            dialogo.gameObject.SetActive(true);
 
-            puzzle();
+            textoSalir.gameObject.SetActive(true);
+            interactUI.SetActive(false);
+        }
+        else
+        {
+            TerminarJuego();
         }
     }
 
     void SeleccionarPalabraAleatoria()
     {
         int indice = Random.Range(0, palabras.Length);
-        palabraActual = palabras[indice].ToUpper();  
+        palabraActual = palabras[indice].ToUpper();
         palabraMostrar = new string('_', palabraActual.Length).ToCharArray();
 
         palabraMostrar[0] = palabraActual[0];
@@ -60,11 +73,11 @@ public class puzzle_tic : MonoBehaviour
         {
             if (palabraActual[i] == ' ')
             {
-                palabraMostrar[i] = ' ';  
+                palabraMostrar[i] = ' ';
             }
         }
 
-        //dialogo.text = new string(palabraMostrar);
+        textoPrincipal = new string(palabraMostrar);
     }
 
     void puzzle()
@@ -89,31 +102,51 @@ public class puzzle_tic : MonoBehaviour
 
                     if (letraEncontrada)
                     {
-                        dialogo.text = new string(palabraMostrar);
+                        textoPrincipal = new string(palabraMostrar);
+                        dialogo.text = textoPrincipal;
                         Debug.Log("Letra correcta: " + letra);
                     }
                     else
                     {
-                        dialogo.text = "Letra incorrecta";
+                        StartCoroutine(MostrarLetraIncorrecta());
                         Debug.Log("Letra incorrecta: " + letra);
                     }
 
                     if (new string(palabraMostrar) == palabraActual)
                     {
                         juego_comenzo = false;
+                        puzzleCompletado = true; // Indica que el puzzle está completado
                         dialogo.text = "¡Palabra completa, puzzle superado!";
                         StartCoroutine(Esperame());
                     }
+                    break;
                 }
             }
         }
     }
 
+    void TerminarJuego()
+    {
+        juego_comenzo = false;
+        dialogo.text = "";
+        dialogo.gameObject.SetActive(false);
+        camara_puzzle.SetActive(false);
+        camara_principal.SetActive(true);
+
+        textoSalir.gameObject.SetActive(false);
+        interactUI.SetActive(true);
+    }
+
+    IEnumerator MostrarLetraIncorrecta()
+    {
+        dialogo.text = "Letra incorrecta";
+        yield return new WaitForSeconds(2);
+        dialogo.text = textoPrincipal;
+    }
+
     IEnumerator Esperame()
     {
         yield return new WaitForSeconds(5);
-        dialogo.text = "";
-        camara_puzzle.SetActive(false);
-        camara_principal.SetActive(true);
+        TerminarJuego();
     }
 }
