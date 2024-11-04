@@ -17,6 +17,7 @@ public class GuardiaScript : MonoBehaviour
     public LayerMask PLLayer;
     public Vector3 destination;
     public Transform RayPosi;
+    public GameObject Death_Screen;
     void Start()
     {
         if (guardia == null)
@@ -30,6 +31,14 @@ public class GuardiaScript : MonoBehaviour
         Vector3 direccion = jugador.position - transform.position;
 
         if (Physics.Raycast(RayPosi.position, RayPosi.forward, out hit, DistanciaVision, PLLayer, QueryTriggerInteraction.Collide))
+        {
+            Debug.Log(hit.transform);
+            if (hit.transform.gameObject.GetComponent<SC_FPSController>() != null)
+            {
+                Perseguir();
+            }
+        }
+        if (Physics.Raycast(RayPosi.position, RayPosi.right, out hit, DistanciaVision, PLLayer, QueryTriggerInteraction.Collide))
         {
             Debug.Log(hit.transform);
             if (hit.transform.gameObject.GetComponent<SC_FPSController>() != null)
@@ -60,6 +69,16 @@ public class GuardiaScript : MonoBehaviour
         {
             Gizmos.color = Color.green;
             Gizmos.DrawLine(RayPosi.position, RayPosi.position + RayPosi.forward * 5);
+            Gizmos.DrawLine(RayPosi.position, RayPosi.position + RayPosi.right * 5);
         }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Choque");
+
+        
+            Death_Screen.SetActive(true);
+        
     }
 }
