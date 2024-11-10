@@ -30260,6 +30260,7 @@ GameObject:
   - component: {fileID: 860068084}
   - component: {fileID: 863492250}
   - component: {fileID: 862362330}
+  - component: {fileID: 860097685}
   m_Layer: 0
   m_Name: Puerta.013
   m_TagString: Untagged
@@ -30267,6 +30268,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &860097685
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860097684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300034, guid: e275e327d35cf1d45a58541a1835a84c, type: 3}
 --- !u!1 &860097686
 GameObject:
   m_ObjectHideFlags: 0
@@ -30278,6 +30293,7 @@ GameObject:
   - component: {fileID: 860068086}
   - component: {fileID: 863492244}
   - component: {fileID: 862362324}
+  - component: {fileID: 860097687}
   m_Layer: 0
   m_Name: Puerta.014
   m_TagString: Untagged
@@ -30285,6 +30301,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &860097687
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860097686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300040, guid: e275e327d35cf1d45a58541a1835a84c, type: 3}
 --- !u!1 &860097688
 GameObject:
   m_ObjectHideFlags: 0
@@ -30317,6 +30347,7 @@ GameObject:
   - component: {fileID: 860068090}
   - component: {fileID: 863492248}
   - component: {fileID: 862362328}
+  - component: {fileID: 860097691}
   m_Layer: 0
   m_Name: Puerta.012
   m_TagString: Untagged
@@ -30324,6 +30355,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &860097691
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860097690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300026, guid: e275e327d35cf1d45a58541a1835a84c, type: 3}
 --- !u!1 &860097692
 GameObject:
   m_ObjectHideFlags: 0
@@ -30353,6 +30398,7 @@ GameObject:
   - component: {fileID: 860068094}
   - component: {fileID: 863492252}
   - component: {fileID: 862362332}
+  - component: {fileID: 860097695}
   m_Layer: 0
   m_Name: Puerta.010
   m_TagString: Untagged
@@ -30360,6 +30406,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &860097695
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860097694}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300022, guid: e275e327d35cf1d45a58541a1835a84c, type: 3}
 --- !u!1 &860097696
 GameObject:
   m_ObjectHideFlags: 0
