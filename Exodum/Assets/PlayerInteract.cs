@@ -47,6 +47,16 @@ public class PlayerInteract : MonoBehaviour
                 {
                     RackScript.Interact();
                 }
+                IrAPB IrAPB = collider.gameObject.GetComponent<IrAPB>();
+                if (IrAPB != null)
+                {
+                    IrAPB.Interact();
+                }
+                winnerscrpit winnerscrpit = collider.gameObject.GetComponent<winnerscrpit>();
+                if (winnerscrpit != null)
+                {
+                    winnerscrpit.Interact();
+                }
             }
         }
     }

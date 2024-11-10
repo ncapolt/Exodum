@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeathScreen.unity
     guid: a0a0ecd2d7b73554d906613e8cb38663
+  - enabled: 1
+    path: Assets/Scenes/PlantaBaja.unity
+    guid: e7b79dcdc8558794ba65734b773bb5cd
+  - enabled: 1
+    path: Assets/Scenes/DeathScreenPiso.unity
+    guid: c31779d2077c3c7469900290aa91ac34
+  - enabled: 1
+    path: Assets/Scenes/DeathScreenGuardia2.unity
+    guid: a6fc59bc081602f43b81a8939dd0a8e8
+  - enabled: 1
+    path: Assets/Scenes/WInner.unity
+    guid: 0638eb8a8a3b7c34ea8dcb27daa4ed32
   m_configObjects: {}

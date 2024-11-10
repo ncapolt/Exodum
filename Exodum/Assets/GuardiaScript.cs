@@ -83,16 +83,32 @@ public class GuardiaScript : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Choque");
-        if (collision.gameObject.CompareTag("Player"))
+  
+        public void OnCollisionEnter(Collision collision)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            SceneManager.LoadScene("DeathScreen");
+            Debug.Log("Choque");
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+
+                // Obtener la escena actual
+                string currentScene = SceneManager.GetActiveScene().name;
+
+                // Cambiar la escena dependiendo de la escena actual
+                if (currentScene == "TIC")
+                {
+                    SceneManager.LoadScene("DeathScreen"); // Cambia "EscenaFinal" por la escena a la que quieres ir
+                }
+                else if (currentScene == "PlantaBaja")
+                {
+                    SceneManager.LoadScene("DeathScreenGuardia2");
+                }
+                // Agrega más condiciones para otras escenas si es necesario
+            }
         }
-    }
+        
+    
 
     void IrAPosi1()
     {

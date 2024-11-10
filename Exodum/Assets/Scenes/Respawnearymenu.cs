@@ -11,6 +11,11 @@ public class Respawnearymenu : MonoBehaviour
         SceneManager.LoadScene("TIC");
     }
 
+    public void RespawnPB()
+    {
+        SceneManager.LoadScene("PlantaBaja");
+    }
+
     public void VolverAlMenu()
     {
         SceneManager.LoadScene("Menu");
