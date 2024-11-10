@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TIC.unity
     guid: e593b9e9d3e39024d886daeec3b7005e
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: a0a0ecd2d7b73554d906613e8cb38663
   m_configObjects: {}

@@ -6,6 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class GuardiaScript : MonoBehaviour
 {
@@ -85,10 +86,12 @@ public class GuardiaScript : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Choque");
-
-        
-           // Death_Screen.SetActive(true);
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            SceneManager.LoadScene("DeathScreen");
+        }
     }
 
     void IrAPosi1()
