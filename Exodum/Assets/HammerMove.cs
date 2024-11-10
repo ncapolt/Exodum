@@ -9,6 +9,7 @@ public class HammerMove : MonoBehaviour
     private bool returning = false;  // Para controlar el regreso del martillo
     public Collider colliderMartillo;
     public GameObject[] destructibleObjects;  // Array para las sillas u objetos que quieres destruir
+    public bool bancoDestroy;
 
     void Update()
     {
@@ -50,6 +51,7 @@ public class HammerMove : MonoBehaviour
         if (collision.gameObject.tag == "Destructible")
         {
             Destroy(collision.gameObject);
+            bancoDestroy = true;
         }
     }
 
