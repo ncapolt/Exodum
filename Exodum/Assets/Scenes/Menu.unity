@@ -1409,7 +1409,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Programacion:\nNicol\xE1s Low Tanne (4to TIC A)\nThiago Schiera (4to TIC
-    A)\n\nDise\xF1o\nJoaquin Alfie (4to TIC A)\nMax Corach (4to TIC A)"
+    A)\n\nDise\xF1o\nJoaquin Alfie (4to TIC A)\nMax Corach (4to TIC A)\n\nPR (ANY%):
+    00:51,73"
 --- !u!222 &1646404071
 CanvasRenderer:
   m_ObjectHideFlags: 0
