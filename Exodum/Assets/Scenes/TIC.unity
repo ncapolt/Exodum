@@ -86484,8 +86484,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f785e1849ee3ae0478603c699cbb6adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guardia: {fileID: 1522338024}
+  Pos1: {fileID: 1213263218}
+  Pos2: {fileID: 828733498}
+  Pos3: {fileID: 255951387}
+  PosOriginal: {fileID: 1504784395}
   Martillo: {fileID: 0}
   martilloOn: 0
+  destination: {x: 0, y: 0, z: 0}
 --- !u!4 &1246370240
 Transform:
   m_ObjectHideFlags: 0
@@ -87701,6 +87707,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300698, guid: e275e327d35cf1d45a58541a1835a84c, type: 3}
+--- !u!195 &1522338024 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 6987915819226360818, guid: b6bda202b1ec61a499247c2614bc4dc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2321627240177290196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &1522470323
 MeshCollider:
   m_ObjectHideFlags: 0

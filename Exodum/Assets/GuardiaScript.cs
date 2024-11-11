@@ -19,16 +19,12 @@ public class GuardiaScript : MonoBehaviour
     public Vector3 destination;
     public Transform RayPosi;
     public GameObject Death_Screen;
-    public Transform Pos1;
-    public Transform Pos2;
-    public Transform Pos3;
-    public Transform PosOriginal;
     public HammerMove HammerMove;
     void Start()
     {
         if (guardia == null)
             guardia = GetComponent<NavMeshAgent>();
-        StartCoroutine(Movimiento());
+        
     }
 
     void Update()
@@ -108,38 +104,6 @@ public class GuardiaScript : MonoBehaviour
             }
         }
         
-    
-
-    void IrAPosi1()
-    {
-        guardia.destination = Pos1.position;
-    }
-    void IrAPosi2()
-    {
-        guardia.destination = Pos2.position;
-    }
-    void IrAPosi3()
-    {
-        guardia.destination = Pos3.position;
-    }
-    void IrAPosiOriginal()
-    {
-    guardia.destination = PosOriginal.position;
-    }
-    IEnumerator Movimiento()
-    {
-        yield return new WaitForSeconds(3);
-        IrAPosi1();
-        yield return new WaitForSeconds(3);
-        IrAPosi2();
-        yield return new WaitForSeconds(3);
-        IrAPosi3();
-        yield return new WaitForSeconds(3);
-        IrAPosiOriginal();
-        yield return new WaitForSeconds(3);
-        StartCoroutine(Movimiento());
-
-
-    }
+   
         
 }
