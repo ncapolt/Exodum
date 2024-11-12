@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/PlantaBaja.unity
+- path: Assets/Scenes/Medios.unity
   isLoaded: 1
   isActive: 1

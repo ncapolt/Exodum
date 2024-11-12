@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 1
-  controlID: 1439
+  controlID: 1246
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 1440
+  controlID: 1247
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 498}
   m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-  controlID: 1441
+  controlID: 1248
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,10 +186,10 @@ MonoBehaviour:
     y: 0
     width: 2007
     height: 803
-  m_MinSize: {x: 306, y: 224}
-  m_MaxSize: {x: 8006, y: 4024}
+  m_MinSize: {x: 302, y: 224}
+  m_MaxSize: {x: 8002, y: 4024}
   vertical: 0
-  controlID: 1442
+  controlID: 1249
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 274}
   m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 1343
+  controlID: 1295
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -453,14 +453,14 @@ MonoBehaviour:
     height: 783
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: 5983460ee997ab9479dc49914de43a8b
-  m_SceneLighting: 1
+  m_SceneLighting: 0
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.571906, y: 2.09101, z: 9.354294}
+    m_Target: {x: -49.8887, y: 3.256814, z: 8.600369}
     speed: 2
-    m_Value: {x: -7.571906, y: 2.09101, z: 9.354294}
+    m_Value: {x: -49.8887, y: 3.256814, z: 8.600369}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -488,9 +488,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.114677966, y: 0.35290834, z: -0.04362955, w: -0.92757815}
+    m_Target: {x: 0.012392753, y: 0.97560847, z: -0.057145722, w: 0.21158656}
     speed: 2
-    m_Value: {x: -0.114677966, y: 0.35290834, z: -0.04362955, w: -0.92757815}
+    m_Value: {x: 0.012392753, y: 0.97560847, z: -0.057145722, w: 0.21158656}
   m_Size:
     m_Target: 3.0624304
     speed: 2
@@ -534,10 +534,10 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9ae4fbff4aeffbff46f1fbff7acb0000
+      scrollPos: {x: 0, y: 3965}
+      m_SelectedIDs: 3c7a0300387a0300387c0300407a0300
+      m_LastClickedID: 227904
+      m_ExpandedIDs: c8edffff4ef2ffff0ef9ffffcaf9ffffdefbffff3ec60200d8790300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -599,20 +599,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\nicol\OneDrive\Documents\GitHub\Exodum\Exodum
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1ea40000
-    m_LastClickedID: 42014
-    m_ExpandedIDs: 000000001e900000f0a4000000ca9a3b
+    m_SelectedIDs: 2e4a0000
+    m_LastClickedID: 18990
+    m_ExpandedIDs: 00000000680b0000424b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -640,7 +640,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e900000f0a4000000ca9a3b
+    m_ExpandedIDs: 00000000680b0000424b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
