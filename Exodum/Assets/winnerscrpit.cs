@@ -7,6 +7,8 @@ public class winnerscrpit : MonoBehaviour
 {
     public void Interact()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene("WInner");
     }
 }

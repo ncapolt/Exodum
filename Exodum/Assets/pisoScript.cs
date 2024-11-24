@@ -1,18 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class pisoScript
-    : MonoBehaviour
+public class pisoScript : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        // Comprueba si el objeto que colisiona tiene el tag "Player"
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("Jugador ha colisionado con el piso.");
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Debug.Log("Colisión detectada con el jugador. Cambiando a la escena 'DeathScreenPiso'.");
+            // Cambia a la escena llamada "DeathScreenPiso"
             SceneManager.LoadScene("DeathScreenPiso");
         }
     }
-
 }
